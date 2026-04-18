@@ -3,6 +3,7 @@
 ## [0.18.3.0] - 2026-04-17
 
 ### Added
+- **GitHub Copilot host support.** `./setup --host copilot` now installs gstack skills for GitHub Copilot (cloud agent, VS Code agent mode, and Copilot CLI). Skills install globally to `~/.copilot/skills/gstack-*/` and per-project to `.github/skills/gstack-*/` — the path Copilot discovers automatically with no config required. Frontmatter is minimal (`name` + `description`) to match Copilot's spec.
 - **Windows cookie import.** `/setup-browser-cookies` now works on Windows. Point it at Chrome, Edge, Brave, or Chromium, pick a profile, and gstack will pull your real browser cookies into the headless session. Handles AES-256-GCM (Chrome 80+), DPAPI key unwrap via PowerShell, and falls back to a headless CDP session for v20 App-Bound Encryption on Chrome 127+. Windows users can now do authenticated QA testing with `/qa` and `/design-review` for the first time.
 - **One-command OpenCode install.** `./setup --host opencode` now wires up gstack skills for OpenCode the same way it does for Claude Code and Codex. No more manual workaround.
 

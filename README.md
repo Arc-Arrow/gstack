@@ -130,6 +130,7 @@ Or target a specific agent with `./setup --host <name>`:
 | Kiro | `--host kiro` | `~/.kiro/skills/gstack-*/` |
 | Hermes | `--host hermes` | `~/.hermes/skills/gstack-*/` |
 | GBrain (mod) | `--host gbrain` | `~/.gbrain/skills/gstack-*/` |
+| GitHub Copilot | `--host copilot` | `~/.copilot/skills/gstack-*/` |
 
 **Want to add support for another agent?** See [docs/ADDING_A_HOST.md](docs/ADDING_A_HOST.md).
 It's one TypeScript config file, zero code changes.
@@ -326,13 +327,14 @@ rm -rf ~/.codex/skills/gstack* 2>/dev/null
 rm -rf ~/.factory/skills/gstack* 2>/dev/null
 rm -rf ~/.kiro/skills/gstack* 2>/dev/null
 rm -rf ~/.openclaw/skills/gstack* 2>/dev/null
+rm -rf ~/.copilot/skills/gstack* 2>/dev/null
 
 # 6. Remove temp files
 rm -f /tmp/gstack-* 2>/dev/null
 
 # 7. Per-project cleanup (run from each project root)
 rm -rf .gstack .gstack-worktrees .claude/skills/gstack 2>/dev/null
-rm -rf .agents/skills/gstack* .factory/skills/gstack* 2>/dev/null
+rm -rf .agents/skills/gstack* .factory/skills/gstack* .github/skills/gstack* 2>/dev/null
 ```
 
 ### Clean up CLAUDE.md
